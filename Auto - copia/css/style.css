@@ -1,0 +1,105 @@
+
+.paisaje{
+    display: flex;
+    background-image: url(../Multimedia/fondo\ carro.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.paisajeMover{
+    animation-name: fondo;
+    animation: fondo 5s infinite linear;  
+}
+
+.bus{
+    position: absolute;
+    bottom: 80px;
+    left: 370px;
+}
+
+.rueda1{ 
+    position: absolute;
+    bottom: 3.5rem;
+    right: 25rem;
+}
+
+.rueda1Para{
+    animation-name: ruedaMover;
+    animation: ruedaMover 3s infinite linear;  
+}
+
+.rueda2{ 
+    position: absolute;
+    bottom: 3.5rem;
+    left: 27.5rem;
+}
+
+.rueda2Para{
+    animation-name: ruedaMover;
+    animation: ruedaMover 3s infinite linear;  
+}
+
+
+.luz{
+    position: absolute;
+    right: -1rem;
+
+}
+
+.luzOculto{
+    display: none;
+}
+
+.luzMover{
+    animation-name: luz;
+    animation: luz 2s infinite linear;
+}
+
+
+.sprite{
+    background: url(../Multimedia/sprite.png); 
+    position: absolute;
+    left: 12rem ;
+    bottom: 6rem ;
+    width: 186.4px;
+    height:50px;
+}
+
+.spriteOculto{
+    display: none;
+}
+
+.spriteMover{
+    animation: sprites 2s infinite steps(5);
+}
+
+@keyframes sprites{
+    100%{
+        background-position-x:932px;
+    }
+}
+
+ @keyframes ruedaMover{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fondo{
+    100%{
+    background-position-x: -2000px ;
+    }
+    
+}
+
+@keyframes luz{
+    0%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
